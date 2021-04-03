@@ -64,4 +64,82 @@ console.log(fruits.unshift("pineapples"));
 console.log(fruits);
 fruits.pop();
 console.log(fruits);
+// to check whether a array
+
+console.log(Array.isArray('hello'));
+console.log(Array.isArray(veg));
+console.log(veg.indexOf('tomato'));
+// objects
+const person = {
+    firstName: 'Cordelia',
+    lastName: 'princess',
+    age:26,
+    hobbies:['music','games'],
+    address:{
+        kingdom: 'Avonli',
+        palace: 'mahal'
+    }
+
+}
+console.log(person);
+console.log(person.firstName);
+console.log(person.hobbies[1]);
+console.log(person.firstName, person.lastName);
+console.log(person.address.palace);
+
+// to use objesct values as variables
+//destructuring
+const {firstName, lastName, address:{kingdom}} = person;
+console.log(firstName);// instead of person.firstName
+console.log(kingdom);// instead of person.address.kingdom
+//to add properties
+person.study = 'arts';
+console.log(person);
+
+
+// array of objects
+const todos = [
+    {
+        id:1,
+        task:"takeout trash",
+        isCompleted:true
+    },
+    {
+        id:2,
+        task:"clean dishes",
+        isCompleted:true
+    },
+    {
+        id:3,
+        task:"doctor appointment",
+        isCompleted:false
+    }
+    
+] ;
+console.log(todos);
+console.log(todos[2].task);
+
+//  convert object to json to send to server
+const todoJSON = JSON.stringify(todos);//object can take '' for string but for JSON everything strings should be in "" both keys and values
+console.log(todoJSON);
+
+//loops
+//for loop
+for(let i=0; i< 10; i++){
+    console.log(i);
+    console.log(`for loop number: ${i}`);
+}
+for(let i=0; i<=10; i++){
+    console.log(i);
+    console.log(`for loop number ${i}`);
+}
+
+//while
+let j=0;
+while(j<10){
+    console.log(`while loop number ${j}`);
+    j++;
+}
+
+
 
